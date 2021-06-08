@@ -46,10 +46,8 @@ namespace game_of_life
         return res;
     }
 
-    string print_state(const vector< vector<int> > &state)
+    void print_state(const vector< vector<int> > &state)
     {
-        string res {""};
-
         for (auto row : state)
         {
             for (int cell : row)
@@ -58,8 +56,6 @@ namespace game_of_life
             }
             std::cout << std::endl;
         }
-
-        return res;
     }
 
     vector< vector<int> > calculate_next_state(const vector< vector<int> > &state)

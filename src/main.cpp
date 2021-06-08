@@ -16,13 +16,15 @@ int main()
 {
     vector< vector<int> > state = game_of_life::parse_state(initial_state);
 
-    std::cout << game_of_life::print_state(state) << std::endl;
+    game_of_life::print_state(state);
 
     for (int i = 0; i < 5; i++)
     {
         state = game_of_life::calculate_next_state(state);
 
-        std::cout << game_of_life::print_state(state) << std::endl;
+        std::cout << std::endl;
+
+        game_of_life::print_state(state);
     }
 
     return 0;
