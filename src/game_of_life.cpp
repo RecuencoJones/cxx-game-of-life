@@ -1,6 +1,6 @@
 #include "game_of_life.h"
 
-vector<string> tokenize(const string value, const string delimiter)
+vector<string> tokenize(const string &value, const string delimiter)
 {
     size_t last = 0;
     size_t next = 0;
@@ -27,7 +27,7 @@ namespace game_of_life
         {  1, -1 }, {  1, 0 }, {  1,  1 }
     };
 
-    vector< vector<int> > parse_state(string representation)
+    vector< vector<int> > parse_state(const string &representation)
     {
         vector< vector<int> > res;
 
@@ -46,7 +46,7 @@ namespace game_of_life
         return res;
     }
 
-    string print_state(vector< vector<int> > state)
+    string print_state(const vector< vector<int> > &state)
     {
         string res {""};
 
@@ -62,7 +62,7 @@ namespace game_of_life
         return res;
     }
 
-    vector< vector<int> > calculate_next_state(vector< vector<int> > state)
+    vector< vector<int> > calculate_next_state(const vector< vector<int> > &state)
     {
         vector< vector<int> > res {state};
 

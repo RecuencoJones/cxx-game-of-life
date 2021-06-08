@@ -4,12 +4,13 @@
 
 using std::vector;
 
-std::string initial_state = "......\n"
-                            "..+...\n"
-                            "...+..\n"
-                            ".+++..\n"
-                            "......"
-                            ;
+const std::string initial_state {
+    "......\n"
+    "..+...\n"
+    "...+..\n"
+    ".+++..\n"
+    "......"
+};
 
 int main()
 {
